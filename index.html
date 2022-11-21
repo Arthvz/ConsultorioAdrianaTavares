@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Consultório Adriana Tavares</title>
+</head>
+<body>
+    <nav id="nav">
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <h1>Consultorio Adriana Tavares</h1>
+          </div>
+          <div class="menu-items">
+            <li><a href="#img-slider">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#servicos-cards">Serviços</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#">Contato</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="img-slider" id="img-slider">
+          <div class="slide active">
+            <img src="./imagens/clareamento.jpg" alt="Imagem de antes e depois de um procedimento de clareamento dental!">
+            <div class="info">
+              <h2>Clareamento Dental</h2>
+              <p>Procedimento de claremanto dental!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="./imagens/coroa_emax.jpg" alt="Imagem de antes e depois de um procedimento de coroa emax!">
+            <div class="info">
+              <h2>Coroa Emax</h2>
+              <p>Procedimento de Coroa Emax!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="./imagens/protese_implantes.jpg" alt="Imagem de antes e depois de um procedimento de protese implantes!">
+            <div class="info">
+              <h2>Protese Implantes</h2>
+              <p>Procedimento de Protese de Implantes!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="./imagens/protocolo_resina.jpg" alt="Imagem de antes e depois de um procedimento de protocolo de resina!">
+            <div class="info">
+              <h2>Protocolo de Resina</h2>
+              <p>Procedimento de Protocolo de resina!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="./imagens/toxina_botulinica.jpg" alt="Imagem de antes e depois de um procedimento de toxina botulínica!">
+            <div class="info">
+              <h2>Botox - Toxina Botulínica</h2>
+              <p>Procedimento de Toxina Botulínica - Botox!</p>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+          </div>
+      </section>
+      
+      <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // Navegação Manual
+        var manualNav = function(manual){
+          slides.forEach((slide) => {
+            slide.classList.remove('active');
+
+            btns.forEach((btn) => {
+              btn.classList.remove('active');
+            });
+          });
+
+          slides[manual].classList.add('active');
+          btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+
+        // Navegação Automática
+        var repeat = function(activeClass){
+          let active = document.getElementsByClassName('active');
+          let i = 1;
+
+          var repeater = () => {
+            setTimeout(function(){
+              [...active].forEach((activeSlide) =>{
+                activeSlide.classList.remove('active');
+              });
+
+              slides[i].classList.add('active');
+              btns[i].classList.add('active');
+              i++;
+
+              if(slides.length == i){
+                i = 0;
+              }
+              if(i >= slides.length){
+                return;
+              }
+              repeater();
+            }, 10000);
+          }
+          repeater();
+        }
+        repeat();
+      </script>
+    </main>
+    <section class="servicos-cards" id="servicos-cards">
+      <section class="cima-cards">
+        <div class="card">
+          <div class="frente">
+            <div class="conteudo">
+              <img src="./icones/implante.png" alt="Icone de Implante!">
+              <h3>Implante</h3>
+            </div>
+          </div>
+          <div class="verso">
+            <div class="conteudo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="frente">
+            <div class="conteudo">
+              <img src="./icones/dentista.png" alt="Icone de Implante!">
+              <h3>Análise dentária</h3>
+            </div>
+          </div>
+          <div class="verso">
+            <div class="conteudo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="frente">
+            <div class="conteudo">
+              <img src="./icones/limpeza.png" alt="Icone de Implante!">
+              <h3>Limpeza</h3>
+            </div>
+          </div>
+          <div class="verso">
+            <div class="conteudo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="baixo-cards">
+        <div class="card">
+          <div class="frente">
+            <div class="conteudo">
+              <img src="./icones/resina.png" alt="Icone de Implante!">
+              <h3>Resina</h3>
+            </div>
+          </div>
+          <div class="verso">
+            <div class="conteudo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="frente">
+            <div class="conteudo">
+              <img src="./icones/restauração.png" alt="Icone de Implante!">
+              <h3>Restauração</h3>
+            </div>
+          </div>
+          <div class="verso">
+            <div class="conteudo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="frente">
+            <div class="conteudo">
+              <img src="./icones/aparelho.png" alt="Icone de Implante!">
+              <h3>Aparelho</h3>
+            </div>
+          </div>
+          <div class="verso">
+            <div class="conteudo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="localizacao" id="localizacao">
+      <h1>Localização:</h1>
+      <p>O Consultorio se localiza na <strong>Rua Dezesseis de Dezembro, Nº10</strong></p>
+      <div style="width: 100%">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305.0438008121296!2d-46.768721459749095!3d-23.59019838729612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ebb8cbf456b2630!2zMjPCsDM1JzI1LjAiUyA0NsKwNDYnMDYuOSJX!5e0!3m2!1spt-BR!2sbr!4v1668313974448!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+</body>
+</html>
