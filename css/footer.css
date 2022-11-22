@@ -1,0 +1,16 @@
+footer{
+	background-color: #fff;
+	color: #41a8c2;
+	text-align: center;
+	align-content: center;
+	margin-top: 40px;
+	height: 80px;
+    box-shadow: 0px -10px 10px 0px rgba(65, 168, 194,0.2);
+}
+footer h4{
+    padding-top: 20px;
+}
+footer a{
+	text-decoration: none;
+	color: rgb(77, 76, 76);
+}
