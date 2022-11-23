@@ -24,10 +24,10 @@
           </div>
           <div class="menu-items">
             <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="paginas/sobre.html">Sobre</a></li>
             <li><a href="#servicos-cards">Serviços</a></li>
             <li><a href="#localizacao">Localização</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#contato">Contato</a></li>
           </div>
         </div>
       </div>
@@ -220,20 +220,42 @@
     <section class="localizacao" id="localizacao">
       <h1>Localização:</h1>
       <p>O Consultorio se localiza na <strong>Rua Dezesseis de Dezembro, Nº10</strong></p>
+      <p>Ao lado da agência da Caixa! Facil <strong>localização de entrada</strong> e de <strong>comunicação (via interfone)</strong></p>
       <div style="width: 100%">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305.0438008121296!2d-46.768721459749095!3d-23.59019838729612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ebb8cbf456b2630!2zMjPCsDM1JzI1LjAiUyA0NsKwNDYnMDYuOSJX!5e0!3m2!1spt-BR!2sbr!4v1668313974448!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-    <section class="contato" id="contato">
-      <form action="" method="post">
-        <label for="input">Nome: <input type="text" placeholder="Nome..."></label>
-        <label for="input">E-mail: <input type="email" placeholder="E-mail..."></label>
-        <label for="input">Assunto: <input type="text" placeholder="Assunto..."></label><br>
-        <textarea name="conteudo-email" id="conteudo-email" placeholder="Conteúdo..." cols="80" rows="20"></textarea>
-      </form>
+    <div class="contato" id="contato">
+      <h1>Contate-me!</h1>
+      <p>Mande um e-mail para <u><strong>agendar uma consulta</strong></u> ou <br> para tirar duvidas referentes aos <u><strong>serviços prestados</strong></u>!</p>
+    </div>
+    <section class="contato-form" id="contato-form">
+      <form action="" method="dialog">
+        <article>
+          <label for="input">Nome: <input type="text" placeholder="Nome..."></label>
+          <label for="input">E-mail: <input type="email" placeholder="E-mail..."></label>
+          <label for="input">Assunto: <input type="text" placeholder="Assunto..."></label>
+        </article>  
+        <article>
+          <textarea name="conteudo-email" id="conteudo-email" placeholder="Conteúdo..." cols="75" rows="18"></textarea>
+        </article>
+        <article>
+          <input type="submit" value="Enviar" onclick="swal('Pronto!', 'Email enviado com sucesso!', 'success')" class="enviar-form" id="enviar-form">
+        </article>
+        </form>
     </section>
+    
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+      swal({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success",
+      });
+    </script>
+
     <footer>
-      <h4>Consultório Adriana Tavares • Desenvolvido por <a href="#">????????</a></h4>
+      <h4>Consultório Adriana Tavares • Desenvolvido por <a href="#">DevPoint</a></h4>
       <h5>Rua Dezesseis de Dezembro - Nº10 - Jd. Rubio - CEP 05547-130</h5>
     </footer>
 </body>

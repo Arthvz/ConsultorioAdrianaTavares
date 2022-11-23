@@ -209,14 +209,51 @@ main{
 
 .contato{
 	margin-top: 8rem;
+	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.8);;
+	color: #fff;
+	text-align: center;
+	font-family: 'Secular One', sans-serif;
+}
+.contato-form{
+	background-color: rgba(0, 0, 0, 0.8);;
+	width: 100%;
+	height: 50%;
 	align-items: center;
 	justify-content: center;	
 	align-content: center;
+	display: flex;
+	font-family: 'Secular One', sans-serif;
+	font-weight: bolder;
 }
-
-.contato label, input, textarea{
-	align-self: center;
+.contato-form article{
+	display: flex;
+}
+.contato-form article label{
+	color: #fff;
+	padding: 2rem;
+}
+.contato-form article{
+	margin-left: auto;
+	margin-right: auto;
+}
+.contato-form article input{
+	border-radius: 5px;
+	padding: 10px;
+	font-weight: bolder;
+}
+.contato-form article textarea{
+	margin-top: 2%;
+	margin-left: 15rem;
+	box-shadow: 1px 1px 90px 2px rgba(255,255,255,0.3);
+	font-weight: bolder;
+	padding: 5px;
+}
+.enviar-form{
+	cursor: pointer;
+	width: 15vw;
+	border: #fff;
+	margin: 10px auto;
 }
 
 /* Media - Responsivo */
