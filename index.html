@@ -244,7 +244,20 @@
         </article>
         </form>
     </section>
-    
+    <section class="whats-back" id="popupWhats">
+      <a href="https://api.whatsapp.com/send?phone=5511959528545&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Quero%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos%2C%20poderia%20me%20ajudar%3F!" target="_blank"><img src="icones/whatsapp-icon.png" class="whats-icon" alt="Icone do WhatsApp que leva para conversar diretamente!!"></a>
+    </section>
+
+    <script type="text/javascript">
+      function showPopUp () {
+        document.getElementById("popupWhats").style.visibility = "visible";
+      }
+      function transitionPopUp () {
+        document.getElementById("popupWhats").style.transition = "600ms ease-in-out";
+      }
+    setTimeout("showPopUp()", 5000);
+    setTimeout("transitionPopUp()", 5000);
+    </script>
     
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
       swal({

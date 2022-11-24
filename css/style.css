@@ -255,6 +255,35 @@ main{
 	border: #fff;
 	margin: 10px auto;
 }
+.whats-back{
+	background-color: #5acbe7;
+	border-radius: 50% / 50%;
+	width: fit-content;
+	border: 2px solid #ffffff;
+	outline: rgba(54, 54, 54,0.2) 2px solid;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	padding: 10px;
+	position: fixed;
+	bottom: 3rem;
+	right: 4rem;
+	z-index: 5;
+	visibility: hidden;
+}
+.whats-icon{
+	padding: 2px;
+	width: 50px;
+	height: 50px;
+	margin-left: 1px;
+}
+.whats-icon:hover {
+	padding: 10px;
+	width: 70px;
+	height: 70px;
+	transition: 600ms ease-in-out;
+}
 
 /* Media - Responsivo */
 @media (max-width: 1600px) {
