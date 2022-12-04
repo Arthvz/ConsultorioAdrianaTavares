@@ -8,7 +8,6 @@
 
 body {
   font-family: 'Secular One', sans-serif;
-  height: 1000px;
 }
 
 .container {
@@ -167,6 +166,25 @@ body {
 
 @media (max-width: 620px) {
   .logo{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 415px) {
+  body{
+    overflow-x:hidden;
+  }
+  .navbar{
+    width: 71.1% !important;
+    position: fixed;
+  }
+  .nav-container .hamburger-lines .line {
+    height: 5px;
+    width: 20px;
+  }
+  .logo{
+    margin-top: 20px;
+    margin-left: -55px;
     font-size: 0.8rem;
   }
 }

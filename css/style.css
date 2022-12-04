@@ -428,6 +428,7 @@ main{
 }
 
 @media (max-width: 420px) {
+	
 	.img-slider{
 		width: 320px;
 		height: 200px;
@@ -449,4 +450,77 @@ main{
 	.img-slider .navigation{
 		bottom: -100px;
 	}
+
+
+
+	.servicos-cards .card{
+		margin-left: 0px;
+		margin-right: -160px;
+	}
+	.servicos-cards .card .frente .conteudo img{
+		max-width: 30px;
+	}
+	.servicos-cards .card .frente{
+		margin-left: 5px;
+		width: 120px;
+		height: 80px;
+		transform: translateY(100);
+	}
+	.servicos-cards .card:hover .frente{
+		transform: translateY(80px);
+	}
+	.servicos-cards .card .frente .conteudo h3{
+		font-size: 10px;
+	}
+	.servicos-cards .card .verso{
+		margin-left: 5px;
+		width: 40%;
+		height: 40%;
+		transform: translateY(20px);
+	}
+	.servicos-cards .card:hover .verso{
+		transform: translateY(100px);
+	}	
+	.servicos-cards .card .verso .conteudo p{
+		font-size: 20%;
+	}
+	.baixo-cards{
+		margin-left: -420px;
+	}
+	.cima-cards{
+		margin-left: -1px;
+		margin-top: 70px;
+	}
+	.contato-form{
+		width: 100%;
+	}
+	.contato-form input{
+		width: 100%;
+		display: flex;
+	}
+	.contato-form textarea {
+		width: 75%;
+		margin-left: 50px !important;
+	}
+	.enviar-form{
+		width: 15vw;
+	}
+
+	.whats-back{
+		bottom: 1rem;
+		right: 100rem;
+	}
+	.whats-icon{
+		padding: 2px;
+		width: 50px;
+		height: 50px;
+		margin-left: 1px;
+	}
+	.whats-icon:hover {
+		padding: 10px;
+		width: 70px;
+		height: 70px;
+		transition: 600ms ease-in-out;
+	}
+	
 }
